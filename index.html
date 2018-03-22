@@ -16,7 +16,7 @@
 	    Hover your mouse over me for a few seconds
         to see my dynamically bound title!</span>
 	</div><br />
-	<div id="app3"><span v-if="seen" v-on:mouseover="hideMessage">Try to move mouse over here.</span></div><br />
+	<div id="app3"><span v-if="seen" @mouseover="hideMessage">Try to move mouse over here.</span></div><br />
 	<div id="app4">
 		My todo List:<br />
 		<ol>
@@ -27,7 +27,7 @@
 	<span class="fontbold">Handling User Input</span>
 	<div id="app5">
 		<p>{{ message }}</p>
-		<button v-on:click="reverseMessage">Reverse Message</button>
+		<button @click="reverseMessage">Reverse Message</button>
 	</div>
 	<br />
 	<div id="app6">
@@ -46,8 +46,8 @@
 			-->
 			<todo-item
 				v-for="item in groceryList"
-				v-bind:todo="item"
-				v-bind:key="item.id">
+				:todo="item"
+				:key="item.id">
 			</todo-item>
 		</ol>
 	</div>
