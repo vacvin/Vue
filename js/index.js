@@ -100,4 +100,14 @@ init = function () {
 	})
 
 	app8.fullName = 'John Doe';
+
+	var app9 = new Vue({
+		el: '#app9',
+		data: {
+			styleObject: {
+				color: 'blue',
+				fontSize: '16px'
+			}
+		}
+	})
 }
